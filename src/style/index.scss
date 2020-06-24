@@ -1,65 +1,50 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
-/* 
-    body{
-        background: #BDBDBD;
-    }
-    
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
-
-*/
 body {
-  background-color: green;
+  background: green;
+  box-sizing: border-box;
 }
-
 .card {
-  display: inline-block;
-  margin: auto;
-  width: 350px;
-  height: 500px;
-  margin-top: 40px;
-}
-.icono-derecha {
-  position: absolute;
-  bottom: -40px;
-  right: 10px;
-  font-size: 80px;
-}
-.icono-izquierda {
-  position: absolute;
-  left: 10px;
-  font-size: 80px;
-}
-.numero {
-  position: absolute;
-  left: 10px;
-  font-size: 100px;
-  width: 100%;
   text-align: center;
-  top: 200px;
-}
-diamonds::after {
-  content: "\2666";
-  color: red;
-}
-
-spades::after {
-  content: "\2660";
-  color: black;
-}
-
-hearts::after {
-  content: "\2665";
-  color: red;
-}
-
-club::after {
-  content: "\2663";
-  color: black;
+  background-color: white;
+  margin: auto;
+  font-size: 80px;
+  height: 400px;
+  width: 290px;
+  padding: 20px;
+  margin-top: 10px;
+  padding-top: 150px;
+  border-radius: 5px;
+  border: 1px solid black;
+  position: relative;
+  &:before {
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    font-size: 80px;
+  }
+  &:after {
+    position: absolute;
+    bottom: 0px;
+    right: 20px;
+    font-size: 80px;
+  }
+  &.spade:before,
+  &.spade:after {
+    content: "\2660";
+  }
+  &.club:before,
+  &.club:after {
+    content: "\2663";
+  }
+  &.heart:before,
+  &.heart:after {
+    content: "\2665";
+    color: red;
+  }
+  &.diamond:before,
+  &.diamond:after {
+    content: "\2666";
+    color: red;
+  }
 }
